@@ -1,30 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
 </head>
-
 <body>
     <div class="container">
+        <!-- Left Panel -->
         <div class="weather-input">
             <div class="input-group">
                 <input type="text" id="userLocation" placeholder="Search for a city..." />
-
                 <select class="converter" id="converter">
                     <option value="celsius">°C</option>
                     <option value="fahrenheit">°F</option>
                 </select>
-
                 <i class="fa fa-search" onclick="findUserLocation()"></i>
             </div>
-
             <div class="weatherIcon"></div>
             <h2 class="temperature"></h2>
             <div class="feelslike"></div>
@@ -34,73 +29,49 @@
             <div class="city"></div>
         </div>
 
-
-
-        </div>
+        <!-- Right Panel -->
         <div class="weather-output">
             <h2 class="heading">Today's Highlights</h2>
             <div class="Highlights">
-
-
-                <!---- Humidity -->
-                <div class="humidity">
-                    Humidity
+                <div class="card card-humidity">
+                    <div>Humidity</div>
                     <i class="fa-solid fa-water"></i>
-                    <h1 class="HValue"></h1>
+                    <h1 id="HValue"></h1>
                 </div>
-
-                <!---- wind-speed -->
-               <div class="wind-speed">
-                    Wind Speed
+                <div class="card card-wind">
+                    <div>Wind Speed</div>
                     <i class="fa-solid fa-wind"></i>
-                    <h1 class="WValue"></h1>
+                    <h1 id="WValue"></h1>
                 </div>
-
-                <!---- Sunrise & Sunset -->
-                <div class="sun">
-                    <span>
+                <div class="card card-sun">
+                    <div>
                         <i class="fa-solid fa-sun"></i>
-                        <p><span id="SRValue"></span> Sunrise</p>
-                    </span>
-                    <span>
+                        <span id="SRValue"></span> Sunrise
+                    </div>
+                    <div>
                         <i class="fa-regular fa-sun"></i>
-                        <p><span id="SSValue"></span> Sunset</p>
-                    </span>
+                        <span id="SSValue"></span> Sunset
+                    </div>
                 </div>
-
-                <!---- Clouds -->
-               <div class="clouds">
-                    Clouds
+                <div class="card card-clouds">
+                    <div>Clouds</div>
                     <i class="fa-solid fa-cloud"></i>
-                    <h1 class="CValue"></h1>
+                    <h1 id="CValue"></h1>
                 </div>
-
-                <!----  UV Index-->
-               <div class="uv-index">
-                    UV Index
+                <div class="card card-uv">
+                    <div>UV Index</div>
                     <i class="fa-solid fa-sun-plant-wilt"></i>
-                    <h1 class="UValue"></h1>
+                    <h1 id="UVValue"></h1>
                 </div>
-
-
-                <!---- Pressure  -->
-                <div class="pressure">
-                    Pressure
+                <div class="card card-pressure">
+                    <div>Pressure</div>
                     <i class="fa-solid fa-volcano"></i>
-                    <h1 class="PValue"></h1>
+                    <h1 id="PValue"></h1>
                 </div>
             </div>
-            <br />
-
-
-                <h2 class="heading">This Week</h2>
-                <div class="Forecast"></div>
-            </div>
+            <h2 class="heading">This Week</h2>
+            <div class="Forecast"></div>
+        </div>
     </div>
-        
-
-
-
 </body>
-
 </html>
