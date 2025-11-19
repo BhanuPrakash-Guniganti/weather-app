@@ -172,3 +172,15 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+
+@media (max-width: 900px) {
+  .Forecast {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .Forecast {
+    grid-template-columns: 1fr;
+  }
+}
