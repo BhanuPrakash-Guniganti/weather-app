@@ -1,30 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Weather App</title>
+
+  <!-- ✅ Tab Icon / Favicon -->
+  <link rel="icon" type="image/png" href="./assets/logo.png" />
+
+  <!-- ✅ Apple Touch Icon (for iPhone Add to Home Screen icon) -->
+  <link rel="apple-touch-icon" href="./assets/logo.png" />
+
+  <!-- ✅ CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ✅ JS -->
+  <script defer src="script.js"></script>
+
+  <!-- ✅ Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <!-- ✅ PWA / Mobile Add to Home Screen -->
+  <link rel="manifest" href="./manifest.json" />
+  <meta name="theme-color" content="#2196f3" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 </head>
+
+
 <body>
     <div class="container">
         <!-- Left Panel -->
         <div class="weather-input">
             <div class="input-group">
                 <input type="text" id="userLocation" placeholder="Search for a city..." />
+                
                 <select class="converter" id="converter">
                     <option value="celsius">°C</option>
                     <option value="fahrenheit">°F</option>
                 </select>
+
                 <i class="fa fa-search" onclick="findUserLocation()"></i>
             </div>
+
             <div class="weatherIcon"></div>
             <h2 class="temperature"></h2>
             <div class="feelslike"></div>
             <div class="description"></div>
+
             <hr />
+
             <div class="date"></div>
             <div class="city"></div>
         </div>
@@ -32,17 +62,20 @@
         <!-- Right Panel -->
         <div class="weather-output">
             <h2 class="heading">Today's Highlights</h2>
+
             <div class="Highlights">
                 <div class="card card-humidity">
                     <div>Humidity</div>
                     <i class="fa-solid fa-water"></i>
                     <h1 id="HValue"></h1>
                 </div>
+
                 <div class="card card-wind">
                     <div>Wind Speed</div>
                     <i class="fa-solid fa-wind"></i>
                     <h1 id="WValue"></h1>
                 </div>
+
                 <div class="card card-sun">
                     <div>
                         <i class="fa-solid fa-sun"></i>
@@ -53,22 +86,26 @@
                         <span id="SSValue"></span> Sunset
                     </div>
                 </div>
+
                 <div class="card card-clouds">
                     <div>Clouds</div>
                     <i class="fa-solid fa-cloud"></i>
                     <h1 id="CValue"></h1>
                 </div>
+
                 <div class="card card-uv">
                     <div>UV Index</div>
                     <i class="fa-solid fa-sun-plant-wilt"></i>
                     <h1 id="UVValue"></h1>
                 </div>
+
                 <div class="card card-pressure">
                     <div>Pressure</div>
                     <i class="fa-solid fa-volcano"></i>
                     <h1 id="PValue"></h1>
                 </div>
             </div>
+
             <h2 class="heading">This Week</h2>
             <div class="Forecast"></div>
         </div>
