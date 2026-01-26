@@ -31,13 +31,6 @@ Open `script.js` and replace:
 const API_KEY = "YOUR_WEATHERAPI_KEY";
 ```
 
-### 4. Run the project
-Use any local server:
-```bash
-python -m http.server
-```
-or open `index.html` directly in a browser.
-
 ## Usage
 - Enter a city in the search bar  
 - Select Celsius or Fahrenheit  
